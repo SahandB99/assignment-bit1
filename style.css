@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  height: 50px;
+}
+
+nav a {
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  color: rgb(175, 2, 2);
+}
+
+main {
+  display: grid;
+  grid-template-rows: repeat(3, 400px);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+main section header img {
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+header h1 {
+  position: absolute;
+  background-color: white;
+}
+
+.about {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.info {
+  display: grid;
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+
+.cards {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 10px;
+  gap: 5px;
+}
+
+.card {
+  border: 2px #4f4f4f solid;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card figure img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.read-more {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  background-color: #4f4f4f;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem;
+}
+
+.read-more a {
+  color: wheat;
+  text-decoration: none;
+}
+
+footer {
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
