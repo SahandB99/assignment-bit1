@@ -5,11 +5,16 @@ const movies = [
   "Shutter Island",
 ];
 
-let text = "<ul>";
-movies.forEach(myFunction);
-text += "</ul>";
-document.getElementById("title").innerHTML = text;
+let ul = document.createElement("ul");
 
-function myFunction(value) {
-  text += "<li>" + value + "</li>";
-}
+let li = document.createElement("li");
+
+document.querySelector("#title").appendChild(ul);
+
+movies.forEach((movie) => {
+  li.innerHTML += movie;
+
+  ul.appendChild(li);
+
+  li = document.createElement("li");
+});
